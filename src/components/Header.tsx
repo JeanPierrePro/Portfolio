@@ -1,17 +1,16 @@
 import React from 'react';
-
+import '../index.css';
 
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <a href="#" className="logo">Jean Pierre Antunes</a>
-      <i className='bx bx-menu' id="menu" style={{ color: '#fff' }}></i>
+      <a href="#home" className="logo">Jean Pierre</a>
       <nav className="navbar">
-        <a href="#home" style={{ '--vlr': 1 } as React.CSSProperties} className="active">Home</a>
-        <a href="#about" style={{ '--vlr': 2 } as React.CSSProperties}>About Me</a>
-        <a href="#education" style={{ '--vlr': 3 } as React.CSSProperties}>Education</a>
-        <a href="#skills" style={{ '--vlr': 4 } as React.CSSProperties}>Skills</a>
-        <a href="#contact" style={{ '--vlr': 5 } as React.CSSProperties}>Contact Me</a>
+        <a href="#home" className="nav-link">Home</a>
+        <a href="#about" className="nav-link">About</a>
+        <a href="#education" className="nav-link">Education</a>
+        <a href="#skills" className="nav-link">Skills</a>
+        <a href="#contact" className="nav-link">Contact</a>
       </nav>
     </header>
   );

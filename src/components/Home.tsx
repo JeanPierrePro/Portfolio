@@ -1,5 +1,6 @@
 import React from 'react';
 import perfil from '../assets/perfil.jpg';
+import '../index.css';
 
 
 const Home: React.FC = () => (

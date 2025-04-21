@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../index.css';
 
 const Education: React.FC = () => (
   <section className="education" id="education">
