@@ -12,7 +12,7 @@ const Education: React.FC = () => (
             <div className="content">
               <div className="year">2021-2022 <i className='bx bxs-calendar'></i></div>
               <h3>Curso de Desenvolvimento Web</h3>
-              <p>Participei de um curso focado em desenvolvimento web, onde aprendi os fundamentos de HTML, CSS e JavaScript, além de introduções a frameworks como React.</p>
+              <p>estou parcipcanto de um curso focado em desenvolvimento web, onde aprendi os fundamentos de HTML, CSS e JavaScript, além de base de dados e  de introduções a frameworks como React.</p>
             </div>
           </div>
           <div className="education-content">
@@ -24,7 +24,7 @@ const Education: React.FC = () => (
           </div>
           <div className="education-content">
             <div className="content">
-              <div className="year">2023 <i className='bx bxs-calendar'></i></div>
+              <div className="year">2025 <i className='bx bxs-calendar'></i></div>
               <h3>Autodidata em Desenvolvimento</h3>
               <p>Atualmente, estou aprendendo de forma autodidata, focando em projetos práticos e melhorando minhas habilidades em programação e desenvolvimento de software.</p>
             </div>
@@ -37,8 +37,8 @@ const Education: React.FC = () => (
           <div className="education-content">
             <div className="content">
               <div className="year">2023 <i className='bx bxs-calendar'></i></div>
-              <h3>Certificado em Python</h3>
-              <p>Concluí um curso de certificação em Python, onde aprendi a construir aplicações simples e entender a lógica por trás da linguagem.</p>
+              <h3>Certificado em AWS</h3>
+              <p>Concluí um curso de certificação NA AWS, onde aprendi a utilziar clauods  simples e entender a lógica por trás da clauod.</p>
             </div>
           </div>
           <div className="education-content">

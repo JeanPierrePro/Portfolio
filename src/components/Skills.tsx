@@ -10,21 +10,21 @@ const Skills: React.FC = () => {
           <h3 className="skill-title">Languages</h3>
           <div className="skill-box skill-box1">
             <div className="single-skill">
-              <span className="topic">HTML</span>
-              <span className="topic">90%</span>
+              <span className="topic">react</span>
+              <span className="topic">60%</span>
             </div>
             <div className="bar-side">
               <div className="bar bar-1" />
             </div>
             <div className="single-skill">
-              <span className="topic">CSS</span>
-              <span className="topic">80%</span>
+              <span className="topic">C++</span>
+              <span className="topic">50%</span>
             </div>
             <div className="bar-side">
               <div className="bar bar-2" />
             </div>
             <div className="single-skill">
-              <span className="topic">JavaScript</span>
+              <span className="topic">Python</span>
               <span className="topic">70%</span>
             </div>
             <div className="bar-side">
