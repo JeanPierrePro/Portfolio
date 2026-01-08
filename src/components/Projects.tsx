@@ -2,7 +2,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, Folder } from "lucide-react";
 
-// 1. Definição dos dados dos projetos (Simulando um banco de dados)
+// --- 1. DICIONÁRIO DE ÍCONES (Imagens das tecnologias) ---
+const techIcons: Record<string, string> = {
+  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "Stripe": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Flask": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+  "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "Tailwind": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  "Framer Motion": "https://pagepro.co/blog/wp-content/uploads/2020/03/framer-motion.png",
+  "API": "https://cdn-icons-png.flaticon.com/512/10169/10169724.png",
+  "CSS Modules": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+};
+
+// --- 2. SEUS PROJETOS ---
 const projectsData = [
   {
     id: 1,
@@ -10,8 +24,11 @@ const projectsData = [
     category: "Pessoal",
     description: "Uma loja virtual completa com carrinho de compras, pagamentos e painel administrativo.",
     image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=800",
-    tags: ["React", "TypeScript", "Stripe"],
-    links: { demo: "#", code: "#" },
+    tags: ["React", "TypeScript", "Tailwind"],
+    links: { 
+      demo: "https://seu-projeto-vercel.app", // <--- COLOCAR LINK DO SITE NO AR
+      code: "https://github.com/JeanUchiha/projeto" // <--- COLOCAR LINK DO GITHUB
+    },
   },
   {
     id: 2,
@@ -45,7 +62,6 @@ const projectsData = [
 const Projects = () => {
   const [filter, setFilter] = useState("Todos");
 
-  // Filtra os projetos com base no botão clicado
   const filteredProjects = projectsData.filter(
     (project) => filter === "Todos" || project.category === filter
   );
@@ -56,7 +72,6 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gray-50 dark:bg-black-rich/50 transition-colors duration-300">
       <div className="container mx-auto px-6">
         
-        {/* Título da Seção */}
         <div className="text-center mb-12">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
@@ -105,16 +120,36 @@ const Projects = () => {
                 key={project.id}
                 className="group bg-white dark:bg-black-lighter rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-300 border border-gray-100 dark:border-gray-800"
               >
-                {/* Imagem do Projeto */}
+                {/* --- ÁREA DA IMAGEM E BOTÕES --- */}
                 <div className="relative h-48 overflow-hidden">
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
-                    <a href={project.links.code} className="p-2 bg-white rounded-full hover:bg-gold-500 hover:text-white transition-colors">
-                      <Github size={20} />
+                  
+                  {/* Overlay Escuro (Sempre escuro para destacar os botões brancos) */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
+                    
+                    {/* Botão GitHub (Repositório) */}
+                    <a 
+                      href={project.links.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white rounded-full text-black-rich hover:bg-gold-500 hover:text-white transition-all transform hover:scale-110 shadow-lg"
+                      title="Ver Código no GitHub"
+                    >
+                      <Github size={22} />
                     </a>
-                    <a href={project.links.demo} className="p-2 bg-white rounded-full hover:bg-gold-500 hover:text-white transition-colors">
-                      <ExternalLink size={20} />
+
+                    {/* Botão Link Externo (Site Online) */}
+                    <a 
+                      href={project.links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white rounded-full text-black-rich hover:bg-gold-500 hover:text-white transition-all transform hover:scale-110 shadow-lg"
+                      title="Acessar Site Online"
+                    >
+                      <ExternalLink size={22} />
                     </a>
+
                   </div>
+                  
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -122,7 +157,6 @@ const Projects = () => {
                   />
                 </div>
 
-                {/* Conteúdo do Card */}
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
                     <span className="text-xs font-bold text-gold-500 uppercase tracking-wider border border-gold-500/30 px-2 py-1 rounded">
@@ -139,12 +173,24 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Tags das Tecnologias */}
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100 dark:border-gray-700">
+                  {/* Tags com Ícones */}
+                  <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                        {tag}
-                      </span>
+                      <div 
+                        key={tag} 
+                        className="flex items-center gap-1.5 bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-full"
+                      >
+                        {techIcons[tag] && (
+                          <img 
+                            src={techIcons[tag]} 
+                            alt={tag} 
+                            className="w-4 h-4 object-contain" 
+                          />
+                        )}
+                        <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
+                            {tag}
+                        </span>
+                      </div>
                     ))}
                   </div>
                 </div>

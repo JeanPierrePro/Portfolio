@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-scroll";
 
 const Hero = () => {
@@ -27,7 +27,8 @@ const Hero = () => {
             Especialista em criar soluções web modernas e performáticas.
           </p>
           
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
+            {/* Botão Ver Projetos */}
             <Link to="projects" smooth={true} duration={500}>
               <button className="bg-black-rich text-white dark:bg-gold-500 dark:text-black-rich px-8 py-3 rounded-full font-medium hover:bg-gold-500 dark:hover:bg-gold-400 transition-all shadow-lg flex items-center gap-2 group">
                 Ver Projetos
@@ -35,13 +36,42 @@ const Hero = () => {
               </button>
             </Link>
             
-            <div className="flex gap-4 items-center px-4">
-              <a href="#" className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors">
+            {/* --- REDES SOCIAIS --- */}
+            <div className="flex gap-4 items-center px-4 border-l border-gray-300 dark:border-gray-700 ml-2">
+              
+              {/* GitHub */}
+              <a 
+                href="https://github.com/JeanUchiha" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors transform hover:scale-110"
+                title="Meu GitHub"
+              >
                 <Github size={24} />
               </a>
-              <a href="#" className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors">
+
+              {/* LinkedIn */}
+              <a 
+                href="https://linkedin.com/in/seu-usuario" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors transform hover:scale-110"
+                title="Meu LinkedIn"
+              >
                 <Linkedin size={24} />
               </a>
+
+              {/* Instagram (Opcional) */}
+              <a 
+                href="https://instagram.com/seu.insta" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors transform hover:scale-110"
+                title="Instagram Profissional"
+              >
+                <Instagram size={24} />
+              </a>
+
             </div>
           </div>
         </motion.div>
@@ -56,7 +86,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gold-200 dark:bg-gold-500/20 rounded-full blur-3xl opacity-30 transform translate-x-4 translate-y-4"></div>
           
           <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white dark:border-black-lighter shadow-2xl transition-colors">
-            {/* FOTO */}
+            {/* SUA FOTO AQUI */}
             <img 
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80" 
               alt="Jean Uchiha" 
