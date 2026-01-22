@@ -39,7 +39,7 @@ const projectsData = [
     
     links: { 
       demo: "https://universal-kappa-six.vercel.app/", 
-      code: "https://github.com/JeanPierrePro/Universal" 
+      
     },
   },
 
