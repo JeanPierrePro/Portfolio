@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">E-mail</p>
-                  <p className="font-semibold text-black-rich dark:text-white">jean.uchiha@email.com</p>
+                  <p className="font-semibold text-black-rich dark:text-white">jeanpierreaprogramador@gmail.com</p>
                 </div>
               </div>
 
@@ -51,7 +51,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Localização</p>
-                  <p className="font-semibold text-black-rich dark:text-white">São Paulo, Brasil</p>
+                  <p className="font-semibold text-black-rich dark:text-white">Portugal</p>
                 </div>
               </div>
 
@@ -62,7 +62,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Telefone / WhatsApp</p>
-                  <p className="font-semibold text-black-rich dark:text-white">+55 (11) 99999-9999</p>
+                  <p className="font-semibold text-black-rich dark:text-white">+351 937 363 715</p>
                 </div>
               </div>
             </div>

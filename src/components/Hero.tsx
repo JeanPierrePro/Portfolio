@@ -41,33 +41,33 @@ const Hero = () => {
               
               {/* GitHub */}
               <a 
-                href="https://github.com/JeanUchiha" 
+                href="https://github.com/JeanPierrePro" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors transform hover:scale-110"
-                title="Meu GitHub"
+                title="GitHub: JeanPierrePro"
               >
                 <Github size={24} />
               </a>
 
               {/* LinkedIn */}
               <a 
-                href="https://linkedin.com/in/seu-usuario" 
+                href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors transform hover:scale-110"
-                title="Meu LinkedIn"
+                title="LinkedIn (Em breve)"
               >
                 <Linkedin size={24} />
               </a>
 
-              {/* Instagram (Opcional) */}
+              {/* Instagram */}
               <a 
-                href="https://instagram.com/seu.insta" 
+                href="https://instagram.com/jeanuchihasz" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-black-rich dark:text-white hover:text-gold-500 dark:hover:text-gold-500 transition-colors transform hover:scale-110"
-                title="Instagram Profissional"
+                title="Instagram"
               >
                 <Instagram size={24} />
               </a>
@@ -86,12 +86,16 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gold-200 dark:bg-gold-500/20 rounded-full blur-3xl opacity-30 transform translate-x-4 translate-y-4"></div>
           
           <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white dark:border-black-lighter shadow-2xl transition-colors">
-            {/* SUA FOTO AQUI */}
+            
+            {/* --- SUA FOTO AQUI --- 
+                O caminho começa com / porque está na pasta public
+            */}
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80" 
+              src="/perfil/perfil temporario.jpeg" 
               alt="Jean Uchiha" 
               className="w-full h-full object-cover"
             />
+            
           </div>
         </motion.div>
 
