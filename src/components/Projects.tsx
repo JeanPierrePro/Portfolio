@@ -30,12 +30,12 @@ const projectsData = [
   {
     id: 1,
     title: "Website de Organização de Eventos",
-    category: "Empresas",
+    category: "Pessoal",
     description: "Solução completa para gestão de eventos com sistema de reservas online.",
     image: "/projetos/Empresas/Universal.jpeg", 
     tags: ["React", "TypeScript", "CSS Modules", "Firebase"],
     
-    featured: true, // <--- MANTENHA TRUE PARA APARECER NO TOPO
+    featured: false, // <--- MANTENHA TRUE PARA APARECER NO TOPO
     
     links: { 
       demo: "https://universal-kappa-six.vercel.app/", 
@@ -99,6 +99,22 @@ const projectsData = [
     links: { 
       demo: "#", 
       code: "" 
+    },
+  },
+
+   {
+    id: 1,
+    title: "Website de Organização de Eventos",
+    category: "Pessoal",
+    description: "Solução completa para gestão de eventos com sistema de reservas online.",
+    image: "/projetos/Pessoal/evolve digital.jpeg", 
+    tags: ["React", "TypeScript", "CSS Modules", "Firebase"],
+    
+    featured: true, // <--- MANTENHA TRUE PARA APARECER NO TOPO
+    
+    links: { 
+      demo: "https://evolve-digital.vercel.app/", 
+      
     },
   },
 
