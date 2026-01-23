@@ -18,83 +18,42 @@ const techIcons: Record<string, string> = {
 };
 
 // ==================================================================================
-//  👇👇👇 ÁREA DE EDIÇÃO DOS PROJETOS 👇👇👇
+//  👇👇👇 ÁREA DE EDIÇÃO DOS PROJETOS (CORRIGIDA) 👇👇👇
 // ==================================================================================
 
 const projectsData = [
   
   // --------------------------------------------------------------------------------
-  // 🌟 DESTAQUE 1: CATEGORIA EMPRESAS (Universal)
-  // Este é o projeto principal que aparece na tela inicial "Seleção Premium"
+  // PROJETO 1: Eventos (Evolve Digital)
   // --------------------------------------------------------------------------------
   {
-    id: 1,
+    id: 1, // ID ÚNICO
     title: "Website de Organização de Eventos",
     category: "Pessoal",
     description: "Solução completa para gestão de eventos com sistema de reservas online.",
-    image: "/projetos/Empresas/Universal.jpeg", 
+    image: "/projetos/Pessoal/evolve digital.jpeg", 
     tags: ["React", "TypeScript", "CSS Modules", "Firebase"],
     
-    featured: false, // <--- MANTENHA TRUE PARA APARECER NO TOPO
+    featured: true, // Aparece nos destaques
     
     links: { 
-      demo: "https://universal-kappa-six.vercel.app/", 
-      
+      demo: "https://evolve-digital.vercel.app/", 
+      code: "" // Se tiver GitHub, coloque aqui
     },
   },
 
   // --------------------------------------------------------------------------------
-  // 🌟 DESTAQUE 2: CATEGORIA ESCOLAR (Seu TCC)
+  // PROJETO 2: Cabeleireiro (Olimpo)
   // --------------------------------------------------------------------------------
   {
-    id: 3, // ID único
-    title: "Sistema de Gestão Escolar",
-    category: "Escolar",
-    description: "Plataforma para gerenciamento de notas e frequências (TCC).",
-    image: "/projetos/Escolar/NOME_DA_SUA_FOTO.jpg", // <--- EDITE O NOME AQUI
-    tags: ["Python", "Flask", "SQL"],
-    
-    featured: false, // <--- MANTENHA TRUE PARA APARECER NO TOPO
-    
-    links: { 
-      demo: "#", 
-      code: "" // Código privado (deixe vazio)
-    },
-  },
-
-  // --------------------------------------------------------------------------------
-  // 🌟 DESTAQUE 3: CATEGORIA PESSOAL (App de Clima)
-  // --------------------------------------------------------------------------------
-  {
-    id: 4, // ID único
-    title: "App de Clima em Tempo Real",
-    category: "Pessoal",
-    description: "Aplicação que consome API externa de meteorologia.",
-    image: "/projetos/Pessoal/NOME_DA_SUA_FOTO.jpg", // <--- EDITE O NOME AQUI
-    tags: ["React", "API", "CSS Modules"],
-    
-    featured: false, // <--- MANTENHA TRUE PARA APARECER NO TOPO
-    
-    links: { 
-      demo: "#", 
-      code: "https://github.com/JeanPierrePro/app-clima" 
-    },
-  },
-
-  // ==============================================================================
-  // 📂 OUTROS PROJETOS (SECUNDÁRIOS)
-  // Estes só aparecem quando a pessoa clica nos botões de filtro específicos
-  // ==============================================================================
-  
-  {
-    id: 2,
+    id: 2, // ID ÚNICO
     title: "Website para Cabeleireiro",
     category: "Empresas",
     description: "Website moderno e responsivo para salão de beleza.",
     image: "/projetos/Empresas/Olimpo.jpeg",
     tags: ["React", "CSS Modules", "Firebase", "TypeScript"],
     
-    featured: true, // <--- FALSE: NÃO APARECE NA TELA INICIAL
+    featured: true, // Aparece nos destaques
     
     links: { 
       demo: "#", 
@@ -102,23 +61,42 @@ const projectsData = [
     },
   },
 
-   {
-    id: 1,
-    title: "Website de Organização de Eventos",
-    category: "Pessoal",
-    description: "Solução completa para gestão de eventos com sistema de reservas online.",
-    image: "/projetos/Pessoal/evolve digital.jpeg", 
-    tags: ["React", "TypeScript", "CSS Modules", "Firebase"],
+  // --------------------------------------------------------------------------------
+  // PROJETO 3: Sistema Escolar (TCC)
+  // --------------------------------------------------------------------------------
+  {
+    id: 3, // ID ÚNICO
+    title: "Sistema de Gestão Escolar",
+    category: "Escolar",
+    description: "Plataforma para gerenciamento de notas e frequências (TCC).",
+    image: "/projetos/Escolar/NOME_DA_SUA_FOTO.jpg", // <--- Lembre de conferir o nome da foto
+    tags: ["Python", "Flask", "SQL"],
     
-    featured: true, // <--- MANTENHA TRUE PARA APARECER NO TOPO
+    featured: false, // Este está como FALSE (só aparece no filtro Escolar). Mude para TRUE se quiser no topo.
     
     links: { 
-      demo: "https://evolve-digital.vercel.app/", 
-      
+      demo: "#", 
+      code: "" 
     },
   },
 
-  // Você pode adicionar mais projetos aqui embaixo copiando o bloco acima...
+    {
+    id: 4, // ID ÚNICO
+    title: "Web site para Criacao de eventos da comunidade de mobile lengends ",
+    category: "Pessoal",
+    description: "Plataforma para gerenciamento de notas e frequências (TCC).",
+    image: "/projetos/Pessoal/Universal.jpeg", // <--- Lembre de conferir o nome da foto
+    tags: ["Python", "Flask", "SQL"],
+    
+    featured: false, // Este está como FALSE (só aparece no filtro Escolar). Mude para TRUE se quiser no topo.
+    
+    links: { 
+      demo: "https://universal-kappa-six.vercel.app/", 
+      code: "" 
+    },
+  },
+
+  // Você pode adicionar mais projetos abaixo, sempre mudando o ID para 4, 5, etc.
 ];
 
 // ==================================================================================
@@ -149,7 +127,7 @@ const Projects = () => {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Sparkles className="text-gold-500" size={20} />
                 <span className="text-gold-500 font-semibold tracking-wider uppercase text-sm">
-                  Top 3 Projetos
+                  Top Projetos
                 </span>
                 <Sparkles className="text-gold-500" size={20} />
               </div>
